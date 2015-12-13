@@ -8,6 +8,7 @@
     	#widget("/widget/newslist/newslist.vm")
     	<div class="index-side">
     		#widget("/widget/hottest/hottest.vm")
+    		#widget("/widget/advertise/advertise.vm")
     	</div>	
   	</div>
 </div>
