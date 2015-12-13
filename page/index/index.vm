@@ -2,32 +2,14 @@
 
 #block("content")
 
-#widget("/widget/slider/slider.vm")
-
-<div id="content">
-  	<div id="candy">
-  		<a href="#">
-  			<img src="/static/img/index/candy/onsale.jpg" alt="上海女人"/>
-  		</a>	
+<div class="index-wrap">
+	#widget("/widget/lightbox/lightbox.vm")
+  	<div class="main-section">
+    	#widget("/widget/newslist/newslist.vm")
+    	<div class="index-side">
+    		#widget("/widget/hottest/hottest.vm")
+    	</div>	
   	</div>
-  	<div id="banner">
-  		<a href="#">
-  			<img src="/static/img/index/goods/goods1.jpg" alt="上海女人"/>
-  		</a>	
-  	</div>
-  	<div id="line"></div>
-  	<div id="new-arrival">
-  		<a href="#">
-  			<img src="/static/img/index/candy/newarrival.jpg" alt="上海女人"/>
-  		</a>	
-  	</div>
-  	#widget("/widget/label/label.vm")
-  	<div id="goods">
-  		<a href="#">
-  			<img src="/static/img/index/goods/goods2.jpg" alt="上海女人"/>
-  		</a>	
-  	</div>
-  	#widget("/widget/bottom/bottom.vm")
 </div>
 
 #end## end of body
