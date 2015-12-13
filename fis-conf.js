@@ -55,7 +55,7 @@ fis.config.merge({
         local : {
             //from参数省略，表示从发布后的根目录开始上传
             //发布到当前项目的上一级的output目录中
-            to : '../beauty/src/main/webapp'
+            to : '../keji50-info/src/main/webapp'
         },
         //也可以是一个数组
         remote2 : [
