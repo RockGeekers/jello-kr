@@ -26,12 +26,7 @@
                 </div>
             </article>
             #end
-            
-            #if ($infos.size() > 0)
-            	#set ($offset = $infos.get($infos.size() - 1).getId())
-            #else
-            	#set ($offset = "")
-            #end
+
             <a class="load-more J_listLoadMore" data-stat-click="wenzhanggengduo.click" href="$rc.getContextPath()?d=next&offset=$offset" id="info_flows_next_link"></a>
         </div>
     </div>
