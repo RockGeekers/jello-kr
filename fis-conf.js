@@ -31,6 +31,9 @@ fis.config.set('settings.parser.sass.include_paths', [
 // 使用 depscombine 是因为，在配置 pack 的时候，命中的文件其依赖也会打包进来。
 fis.config.set('modules.packager', 'depscombine');
 fis.config.merge({
+    roadmap: {
+        domain: 'xxx'
+    },
     deploy : {
         //使用fis release --dest remote来使用这个配置
         remote : {
