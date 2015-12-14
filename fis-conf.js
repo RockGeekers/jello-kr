@@ -32,7 +32,7 @@ fis.config.set('settings.parser.sass.include_paths', [
 fis.config.set('modules.packager', 'depscombine');
 fis.config.merge({
     roadmap: {
-        domain: 'xxx'
+        domain: '/info'
     },
     deploy : {
         //使用fis release --dest remote来使用这个配置
