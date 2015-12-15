@@ -31,6 +31,9 @@ fis.config.set('settings.parser.sass.include_paths', [
 // 使用 depscombine 是因为，在配置 pack 的时候，命中的文件其依赖也会打包进来。
 fis.config.set('modules.packager', 'depscombine');
 fis.config.merge({
+    roadmap: {
+        domain: '/info'
+    },
     deploy : {
         //使用fis release --dest remote来使用这个配置
         remote : {
@@ -55,7 +58,7 @@ fis.config.merge({
         local : {
             //from参数省略，表示从发布后的根目录开始上传
             //发布到当前项目的上一级的output目录中
-            to : '../beauty/src/main/webapp'
+            to : '../keji50-info/src/main/webapp'
         },
         //也可以是一个数组
         remote2 : [
