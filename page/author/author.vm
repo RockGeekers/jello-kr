@@ -1,11 +1,19 @@
 #extends("/page/layout/front/front.vm")
-
+#require("../index/index.css")
+#require("../author/author.css")
 #block("content")
 
 <div class="index-wrap">
-  	<div class="main-section">
-  		<div class="result-info"><div class="keyword"><em class="highlight">$author.getNickname()</em>的所有文章</div><div class="count">结果数：<em class="highlight">$infosTotal</em></div></div>
-    	#widget("/widget/newslist/newslist.vm")
+  	<div class="main-section search-result-wrap">
+  		<div class="result-list">
+  			<div class="result-info">
+  				<div class="keyword">
+  					<em class="highlight">$author.getNickname()</em>的所有文章
+  				</div>
+  				<div class="count">结果数：<em class="highlight">$infosTotal</em></div>
+  			</div>
+    		#widget("/widget/newslist/newslist.vm")
+    	</div>
     	<div class="index-side">
     		#widget("/widget/hottest/hottest.vm")
     		#widget("/widget/advertise/advertise.vm")
