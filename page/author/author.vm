@@ -4,7 +4,7 @@
 
 <div class="index-wrap">
   	<div class="main-section">
-  		<div class="result-info"><div class="keyword"><em class="highlight">'guest'</em>的所有文章</div><div class="count">结果数：<em class="highlight">1086</em></div></div>
+  		<div class="result-info"><div class="keyword"><em class="highlight">$author.getNickname()</em>的所有文章</div><div class="count">结果数：<em class="highlight">$infosTotal</em></div></div>
     	#widget("/widget/newslist/newslist.vm")
     	<div class="index-side">
     		#widget("/widget/hottest/hottest.vm")
