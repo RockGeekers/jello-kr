@@ -3,7 +3,7 @@
         <div class="J_channelIndexAd list-head-ad">
         </div>
         #foreach ($info in $infos)
-        <article>
+        <article data="$info.id">
             <a class="pic info_flow_news_image badge-o2o before-fade-in after-fade-in" data-fit-mobile="true" href="$rc.getContextPath()/p/$info.id" style="background-image: url($info.image);">
                 <span class="mask-tags" style="background-color: $info.infoCategory.colorCode">$info.infoCategory.name</span>
             </a>
@@ -40,4 +40,13 @@
             </div>
         </article>
     <%}%>    
+</script>
+<script>
+    require(['./newslist'], function(app) {
+        app({
+            dom : '.J_listLoadMore',
+            newsUrl : '$pageUrl',
+            flag : '$pageFlag'
+        });
+    });
 </script>

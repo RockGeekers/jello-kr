@@ -1,7 +1,6 @@
 #extends("/page/layout/front/front.vm")
 #require("./detail.css")
 #block("content")
-#widget("/widget/header/header.vm")
 <div class="article-detail-wrap">
         <div class="main-section">
 			#widget("/widget/detail/detail.vm")
