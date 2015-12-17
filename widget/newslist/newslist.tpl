@@ -1,5 +1,7 @@
 <% for(var i = 0,len = data.data.length; i<len ;i++){%>
-<% var info = data.data[i],path = data.contextpath%>
+<% var info = data.data[i],path = data.contextpath ;
+    console.log(path)
+%>
     <article>
         <a class="pic info_flow_news_image badge-o2o before-fade-in after-fade-in" data-fit-mobile="true" href="<%=path %>/p/<%=info.id %>" style="background-image: url(<%=info.image %>);">
             <span class="mask-tags" data-type="<%=info.infoCategory.code %>" style="background-color: <%=info.infoCategory.colorCode %>"><%=info.infoCategory.name %></span>

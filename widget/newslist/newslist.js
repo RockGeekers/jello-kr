@@ -12,28 +12,36 @@ var app = module.exports = function(opt) {
 				_this.getList(opt.newsUrl,{
 					offset : $(this).prev().attr('data'),
 					d : 'next'
+				},function(data){
+					if(data.code == 0){
+						var result = Template.parse(_this.listTemplate,{data:data});
+						$("#listWrap").append(result);
+			   		}
 				});
 			});
-			$('.J_newsListNavBar').length && $('.J_newsListNavBar').click(function(){
-				_this.getList(opt.pageCateUrl + $(this).attr('data'),{
+			$('.J_newsListNavBar').length && $('.J_newsListNavBar').delegate('.tab','click',function(e){
+				var url = ($(this).hasClass('firstList') ? opt.newsUrl : opt.pageCateUrl) + $(this).attr('data')
+				_this.getList(url,{
 					offset : $(opt.dom).prev().attr('data'),
 					d : 'next'
+				},function(data){
+					if(data.code == 0){
+						var result = Template.parse(_this.listTemplate,{data:data});
+						$("#listWrap").html(result);
+						$(e.target).addClass('active').siblings().removeClass('active');
+			   		}
 				});
-			})
+			});
 		},
-		getList : function(url,opt){
+		getList : function(url,opt,callback){
+			var _this = this;
 			$.ajax({
 			   	type: "get",
 			   	url: url,
 			   	data: opt,
-			   	success: function(data){
-			   		if(data.code == 0){
-						var result = Template.parse(_this.listTemplate,{list:data.data,path:data.contextpath});
-						$(result).insertBefore('.J_listLoadMore');
-			   		}
-			   	}
+			   	success: callback
 			}).complete(function(){
-				console.log('success')
+				console.log('success');
 			});
 		} 
 	};
