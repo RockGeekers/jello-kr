@@ -24,22 +24,22 @@
     </div>
 </div>
 <script>
-    $(function() {
-        $('.tip').miniTip({
-            'event' : 'click',
-            'delay'             : '10000',
-            'contentType'       : 'selector',
-            'contentSelector'   : '.tip-content',
-            'position'          : 'left',
-            'className'         : 'white'});
-        });
-        function closeTip(){
-          $('.minitip-content').hide();
-          $('.minitip-arrow').hide();
-        }
-        function openTip(){
-          $('.minitip-content').show();
-          $('.minitip-arrow').show();
-        }
-    });
+    // $(function() {
+    //     $('.tip').miniTip({
+    //         'event' : 'click',
+    //         'delay'             : '10000',
+    //         'contentType'       : 'selector',
+    //         'contentSelector'   : '.tip-content',
+    //         'position'          : 'left',
+    //         'className'         : 'white'});
+    //     });
+    //     function closeTip(){
+    //       $('.minitip-content').hide();
+    //       $('.minitip-arrow').hide();
+    //     }
+    //     function openTip(){
+    //       $('.minitip-content').show();
+    //       $('.minitip-arrow').show();
+    //     }
+    // });
 </script> 
