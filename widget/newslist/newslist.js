@@ -9,15 +9,37 @@ var app = module.exports = function(opt) {
 		addEvent : function(){
 			var _this = this;
 			$(opt.dom).click(function(){
-				console.log(_this.listTemplate);
+				var infoId = $(this).prev().attr('data'),
+					url = opt.newsUrl;
+				_this.getList(url,{
+					offset : infoId,
+					d : 'next'
+				},function(data){
+					Template.parse(_this.listTemplate,{list:data.data});
+				});
 			});
-		}
+			$('.J_newsListNavBar').length && $('.J_newsListNavBar').click(function(){
+				var infoId = $(opt.dom).prev().attr('data'),
+					url = opt.newsUrl + $(this).attr('data');
+				_this.getList(url,{
+					offset : infoId,
+					d : 'next'
+				},function(data){
+					Template.parse(_this.listTemplate,{list:data.data});
+				});
+			})
+		},
+		getList : function(url,opt,callback){
+			var infoId = 
+			$.ajax({
+			   	type: "get",
+			   	url: url,
+			   	data: opt,
+			   	success: callback
+			}).complete(function(){
+				console.log('xx')
+			});
+		} 
 	};
 	list.init();
-	$(opt.dom).click(function(){
-		$("#mask").css('height', document.body.scrollHeight).show();
-	})
-	$("#mask").click(function(){
-		$(this).hide();
-	})
 };
