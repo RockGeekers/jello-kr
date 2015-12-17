@@ -1,5 +1,6 @@
 {
     "message": "成功",
+    "contextpath":"/info",
     "data": [{
         "id": 9,
         "infoCategory": {
