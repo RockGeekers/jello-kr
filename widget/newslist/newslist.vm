@@ -27,7 +27,8 @@
         app({
             dom : '.J_listLoadMore',
             newsUrl : '$pageUrl',
-            pageFlag : '$pageFlag'
+            pageFlag : '$pageFlag',
+            pageCateUrl : '!{$pageCateUrl}'
         });
     });
 #end

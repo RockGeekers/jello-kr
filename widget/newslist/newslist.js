@@ -9,35 +9,31 @@ var app = module.exports = function(opt) {
 		addEvent : function(){
 			var _this = this;
 			$(opt.dom).click(function(){
-				var infoId = $(this).prev().attr('data'),
-					url = opt.newsUrl;
-				_this.getList(url,{
-					offset : infoId,
+				_this.getList(opt.newsUrl,{
+					offset : $(this).prev().attr('data'),
 					d : 'next'
-				},function(data){
-					Template.parse(_this.listTemplate,{list:data.data});
 				});
 			});
 			$('.J_newsListNavBar').length && $('.J_newsListNavBar').click(function(){
-				var infoId = $(opt.dom).prev().attr('data'),
-					url = opt.newsUrl + $(this).attr('data');
-				_this.getList(url,{
-					offset : infoId,
+				_this.getList(opt.pageCateUrl + $(this).attr('data'),{
+					offset : $(opt.dom).prev().attr('data'),
 					d : 'next'
-				},function(data){
-					Template.parse(_this.listTemplate,{list:data.data});
 				});
 			})
 		},
-		getList : function(url,opt,callback){
-			var infoId = 
+		getList : function(url,opt){
 			$.ajax({
 			   	type: "get",
 			   	url: url,
 			   	data: opt,
-			   	success: callback
+			   	success: function(data){
+			   		if(data.code == 0){
+						var result = Template.parse(_this.listTemplate,{list:data.data,path:data.contextpath});
+						$(result).insertBefore('.J_listLoadMore');
+			   		}
+			   	}
 			}).complete(function(){
-				console.log('xx')
+				console.log('success')
 			});
 		} 
 	};
