@@ -1,4 +1,3 @@
-#set($keji50_domain = "http://139.196.192.39")
 <div class="top ss">
     <div class="topBox">
         <div class="topLink_1">
@@ -12,7 +11,7 @@
             <a href="$keji50_domain/web?command=aboutus">关于我们</a>
         </div>
         <div class="topLink_2 fr">
-        	<iframe style="display:none;" name="iframe" src="$keji50_domain/common/login-user.jsp" width="100%" />
+        	
         #* 
 		<c:if test="${sessionScope.login}">    
             <span><a href="#"><c:out value="${sessionScope.account.nickname}"/></a></span>     

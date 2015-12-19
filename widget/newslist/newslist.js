@@ -9,8 +9,14 @@ var app = module.exports = function(opt) {
 		addEvent : function(){
 			var _this = this;
 			$(opt.dom).click(function(){
-				_this.getList(opt.newsUrl,{
-					offset : $(this).prev().attr('data'),
+				var url;
+				if($('.J_newsListNavBar .firstList').hasClass('active')){
+					url = opt.newsUrl
+				}else{
+					url = opt.pageCateUrl + $('.J_newsListNavBar .active').attr('data')
+				}
+				_this.getList(url,{
+					offset : $('#listWrap').children(':last').attr('data'),
 					d : 'next'
 				},function(data){
 					if(data.code == 0){
@@ -22,7 +28,7 @@ var app = module.exports = function(opt) {
 			$('.J_newsListNavBar').length && $('.J_newsListNavBar').delegate('.tab','click',function(e){
 				var url = ($(this).hasClass('firstList') ? opt.newsUrl : opt.pageCateUrl) + $(this).attr('data')
 				_this.getList(url,{
-					offset : $(opt.dom).prev().attr('data'),
+					offset : $('#listWrap').children(':last').attr('data'),
 					d : 'next'
 				},function(data){
 					if(data.code == 0){
