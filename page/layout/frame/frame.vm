@@ -23,7 +23,7 @@
     #require("./frame.vm")
     <script>
         window.onload = function(){
-            var loginInfo = document.frames['login'].document.body.innerHTML ;
+            var loginInfo = window.frames['login'].document.body.innerHTML ;
             loginInfo = eval(loginInfo);
             console.log(loginInfo.isUserLogin);
         }
