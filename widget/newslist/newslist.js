@@ -33,6 +33,7 @@ var app = module.exports = function(opt) {
 			});
 			$('.J_newsListNavBar').length && $('.J_newsListNavBar').delegate('.tab','click',function(e){
 				var url = ($(this).hasClass('firstList') ? opt.newsUrl : opt.pageCateUrl) + $(this).attr('data')
+				$('.J_listLoadMore').removeClass('loading no-data');
 				_this.getList(url,{
 					d : 'next'
 				},function(data){
