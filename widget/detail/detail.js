@@ -7,12 +7,17 @@ var app = module.exports = function(opt){
 			this.addEvent();
 		},
 		addEvent : function(){
-			var _this = this;
+			var _this = this,
+				i = 0
 			var getlogin = setInterval(function(){
-				if(loginInfo){
+				i++;
+				console.log(i);
+				console.log(loginInfo)
+				if(loginInfo || i > 100){
 					clearInterval(getlogin);
-					if(loginInfo.isUserLogin){
-						$('#J_userInfo').find('.avatar').css('backGroundImage',loginInfo.image);
+					if(loginInfo && loginInfo.isUserLogin){
+						$('#J_userInfo').show().find('.avatar').css('backgroundImage',loginInfo.image);
+						$('#J_loginname').html(loginInfo.nickName);
 						$('.require-login').show();
 						$('.J_requirelogin').hide();
 					}else{
@@ -20,7 +25,7 @@ var app = module.exports = function(opt){
 						$('.J_requirelogin').show();
 					}
 					_this.getList(opt.commentUrl,{
-						author_id : loginInfo.id
+						author_id : loginInfo ? loginInfo.id : 0
 					},'get',function(data){
 						if(data.code == 0){
 							if(data.data.length){
@@ -30,7 +35,8 @@ var app = module.exports = function(opt){
 						}
 					});
 				}
-			},100);
+			},200);
+			
 			$('#J_comments').delegate('.pull-right','click',function(){
 
 			});
