@@ -5,7 +5,9 @@ var app = module.exports = function(opt) {
 			this.addEvent();
 		},
 		addEvent : function(){
-			
+			// if(loginInfo){
+			// 	console.log(loginInfo);
+			// }
 		},
 	};
 	detail.init();

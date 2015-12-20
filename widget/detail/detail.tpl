@@ -1,6 +1,5 @@
 <% for(var i = 0,len = data.data.length; i<len ;i++){%>
 <% var comment = data.data[i],path = data.contextpath ; %>
-
 <div class="comment cf comment_details" data-comment-id="<%=comment.id %>">
     <div class="avatar left">
         <a href="javascript:void(0)"><img alt="科技50用户<%=comment.author.nickname %>" data-lazyload="<%=comment.author.image %>" raw_iden="<%=comment.id %>" class="before-fade-in"></a>
