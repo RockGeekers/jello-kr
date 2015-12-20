@@ -46,7 +46,15 @@
     text-decoration: none;
     color: #fff;
 }
-
+.topLink_2 a.ico-user ,.topLink_2 a.ico-edit{
+    padding-left: 25px;
+}
+.ico-user {
+    background: url('./images/user.png') left center no-repeat;
+}
+.ico-edit {
+    background: url('./images/edit.png') left center no-repeat;
+}
 .topBox a:hover {
     text-decoration: none;
 }
@@ -72,7 +80,7 @@
     display: block;
     height: 50px;
     line-height: 50px;
-    padding: 0px 7px;
+    margin: 0px 7px;
     float: left;
     font-size: 15px;
     color: #fff;
