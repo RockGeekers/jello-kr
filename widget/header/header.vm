@@ -2,7 +2,7 @@
     <div class="topBox">
         <div class="topLink_1">
             <a class="logo" href="#"><img src="./images/logo.png"/></a>
-            <a href="/info">资讯</a>
+            <a href="$rc.getContextPath()">资讯</a>
             <a href="$keji50_domain/web?command=ListNews">创业活动</a>
             <a href="$keji50_domain/web?command=ListPro">项目展示</a>
             <a href="$keji50_domain/web?command=ListTutor">导师</a>
