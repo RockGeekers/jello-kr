@@ -16,7 +16,7 @@ var app = module.exports = function(opt) {
 				}else{
 					url = opt.pageCateUrl + $('.J_newsListNavBar .active').attr('data')
 				}
-				if(!$J_loadMore.hasClass('.no-data')){
+				if(!$J_loadMore.hasClass('no-data')){
 					$J_loadMore.addClass('loading');
 					_this.getList(url,{
 						offset : $('#listWrap').children(':last').attr('data'),
