@@ -1,4 +1,5 @@
 #set($commentUrl = "$rc.getContextPath()/comment/get/$info.id")
+#set($postUrl = "$rc.getContextPath()/comment/post/$info.id")
 <div class="content-wrapper">
     <div class="article-section" data-aid="$info.id" data-url="$rc.getContextPath()/p/$info.id" id="article-section-$info.id">
         <div class="inner">
@@ -69,13 +70,20 @@
             <section class="single-post-comment english-wrap">
                 <h2>文章评论(<span class="comment_form_count">1</span>)</h2>
                 <div class="single-post-comment-reply">
+                    <div class="single-post-comment__form cf require-login">
+                        <form class="comment_form" method="post">
+                            <textarea class="textarea" data-widearea="enable" id="post" name="comment[content]" placeholder="你怎么看？"></textarea>
+                            <span class="focus-tips textarea-focus-tips">请回复有价值的信息，无意义的评论将很快被删除，账号将被禁止发言。</span>
+                            <span class="reply_message"></span>
+                        </form>
+                    </div>
                     <div style="clear:both"></div>
                     <div class="bottom">
                         <div class="meta left cf"><a class="login_before_comment" href="http://36kr.com/users/sign_in?ok_url=%2Fp%2F5040832.html">登录</a>后参与讨论</div>
                     </div>
                 </div>
                 <hr>
-                <div async="true" class="single-post-comment__comments" style="display: block;">
+                <div async="true" id="J_comments" class="single-post-comment__comments" style="display: block;">
                     <div class="comment cf comment_details" data-comment-id="351853">
                         <div class="avatar left">
                             <a href="javascript:void(0)"><img alt="36氪用户菲菲小" data-lazyload="http://ww4.sinaimg.cn/crop.0.0.512.512.1024/4f02c7bejw8es1epl4d9qj20e80e8t96.jpg" raw_iden="287993" class="before-fade-in"></a>
@@ -95,6 +103,10 @@
         </div>
     </div>
 </div>
-<script>
-    
-</script>
+#script()
+    require(['./detail'], function(app) {
+        app({
+            dom : '.J_newsListNavBar'
+        });
+    });
+#end

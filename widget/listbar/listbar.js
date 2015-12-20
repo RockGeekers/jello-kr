@@ -12,9 +12,6 @@ var app = module.exports = function(opt) {
 					wrapset = $(".J_articleListWrap")[0].getBoundingClientRect(),
 					wrapsetTop = parseInt(wrapset.top),
 					wrapsetBottom = parseInt(wrapset.bottom);
-				console.log('topset : ' + topset);
-				console.log('wrapsetTop : ' + wrapsetTop);
-				console.log('wrapsetBottom : ' + wrapsetBottom);	
 				
 				if(!$J_navBar.hasClass('fixed') && topset < 60 && topset > -60){
 					$J_navBar.addClass('fixed');
