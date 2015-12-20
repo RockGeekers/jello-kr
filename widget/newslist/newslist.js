@@ -10,7 +10,8 @@ var app = module.exports = function(opt) {
 			var _this = this;
 			$(opt.dom).click(function(){
 				var url;
-				if($('.J_newsListNavBar .firstList').hasClass('active')){
+				$('.J_listLoadMore').addClass('loading');
+				if($('.J_newsListNavBar').length == 0 || $('.J_newsListNavBar .firstList').hasClass('active')){
 					url = opt.newsUrl
 				}else{
 					url = opt.pageCateUrl + $('.J_newsListNavBar .active').attr('data')
@@ -20,8 +21,13 @@ var app = module.exports = function(opt) {
 					d : 'next'
 				},function(data){
 					if(data.code == 0){
-						var result = Template.parse(_this.listTemplate,{data:data});
-						$("#listWrap").append(result);
+						if(data.data.length){
+							$('.J_listLoadMore').removeClass('loading');
+							var result = Template.parse(_this.listTemplate,{data:data});
+							$("#listWrap").append(result);
+						}else{
+							$('.J_listLoadMore').removeClass('loading').addClass('no-data');
+						}
 			   		}
 				});
 			});
