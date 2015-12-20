@@ -22,7 +22,7 @@ var app = module.exports = function(opt) {
 				},function(data){
 					if(data.code == 0){
 						if(data.data.length){
-							$('.J_listLoadMore').removeClass('loading');
+							$('.J_listLoadMore').removeClass('loading no-data');
 							var result = Template.parse(_this.listTemplate,{data:data});
 							$("#listWrap").append(result);
 						}else{
