@@ -1,4 +1,4 @@
-/* 开始页面样式 */
+/* 寮�椤甸潰鏍峰紡 */
 
 .top {
     height: 50px;
@@ -61,7 +61,7 @@
 }
 
 .topBox .selected {
-    background: black;
+    background: darkcyan;
     text-decoration: none;
 }
 .topLink_1 a.logo {
