@@ -89,7 +89,7 @@
                     </div>
                     <div style="clear:both"></div>
                     <div class="bottom J_requirelogin">
-                        <div class="meta left cf"><a class="login_before_comment" href="http://36kr.com/users/sign_in?ok_url=%2Fp%2F5040832.html">登录</a>后参与讨论</div>
+                        <div class="meta left cf"><a class="login_before_comment" href="$keji50_domain/web?command=Login">登录</a>后参与讨论</div>
                     </div>
                 </div>
                 <hr>
