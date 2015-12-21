@@ -11,9 +11,8 @@ var app = module.exports = function(opt){
 				i = 0
 			var getlogin = setInterval(function(){
 				i++;
-				console.log(i);
 				console.log(loginInfo)
-				if(loginInfo || i > 100){
+				if(loginInfo || i > 10){
 					clearInterval(getlogin);
 					if(loginInfo && loginInfo.isUserLogin){
 						$('#J_userInfo').show().find('.avatar').css('backgroundImage',loginInfo.image);
@@ -29,6 +28,8 @@ var app = module.exports = function(opt){
 					},'get',function(data){
 						if(data.code == 0){
 							if(data.data.length){
+								$('#commentTotalCount').html(data.data.length);
+								$('#commentFormCount').html(data.data.length);
 								var result = Template.parse(_this.commentTemplate,{data:data});
 								$('#J_comments').html(result);
 							}

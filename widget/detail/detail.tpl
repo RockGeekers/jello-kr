@@ -2,13 +2,23 @@
 <% var comment = data.data[i],path = data.contextpath ; %>
 <div class="comment cf comment_details" data-comment-id="<%=comment.id %>">
     <div class="avatar left">
-        <a href="javascript:void(0)"><img alt="科技50用户<%=comment.author.nickname %>" data-lazyload="<%=comment.author.image %>" raw_iden="<%=comment.id %>" class="before-fade-in"></a>
+        <a href="javascript:void(0)"><img alt="科技50用户<%=comment.author.nickname %>" src="<%=comment.author.image %>" raw_iden="<%=comment.id %>" class="before-fade-in"></a>
     </div>
     <div class="comment-wrapper">
         <div class="postmeta"><a class="user_info_name" href="javascript:void(0)"><%=comment.author.nickname %></a>&nbsp;•&nbsp;
             <abbr class="timeago" title="<%=comment.createDate %>"><%=comment.createDate %></abbr>
         </div>
         <div class="commemt-main">
+        	<%  if(comment.state == 'c') { %>
+        	<span title="该评论正在审核中, 仅对本人可见" class="badge badge-warning">审核中</span>
+        	<% 
+        	    } 
+        	    
+        	    console.log(comment.toAuthor);
+        		if (comment.toAuthor != '123') {
+        	%>
+        	<span class="replay-tips">回复<%=comment.toAuthor %>：</span>
+        	<% } %>
             <p><%=comment.content %></p>
         </div>
         <div class="opts"></div>
