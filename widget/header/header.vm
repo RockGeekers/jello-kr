@@ -1,4 +1,4 @@
-<div class="top ss">
+<div class="top ss" id="header">
     <div class="topBox">
         <div class="topLink_1">
             <a class="logo" href="$keji50_domain"><img src="./images/logo.png"/></a>
