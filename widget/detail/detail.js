@@ -47,7 +47,7 @@ var app = module.exports = function(opt){
 				var content = $('#post').val();
 				if(content){
 					_this.postComment(opt.postUrl ,{
-						author_id : loginInfo.JSESSIONID,
+						author_id : loginInfo.id,
 						to_author : $('#post').attr('data-author'),
 						content : content
 					},function(data){
