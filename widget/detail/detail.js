@@ -28,6 +28,8 @@ var app = module.exports = function(opt){
 					},'get',function(data){
 						if(data.code == 0){
 							if(data.data.length){
+								$('#commentTotalCount').html(data.data.length);
+								$('#commentFormCount').html(data.data.length);
 								var result = Template.parse(_this.commentTemplate,{data:data});
 								$('#J_comments').html(result);
 							}
