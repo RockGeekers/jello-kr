@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/static/common/base.css" type="text/css" />
+<!-- 回到顶部 开始 -->
+<!--好房app 右侧固定二维码 和 回到顶端-->
+<div class="hf-fixed-sider" id="J_backTop">
+    <a class="small-rcode j_small-rcode" href="javascript:void(0)">
+    	<div class="sub-fixed sider-ewm">
+    		<p>扫码下载好房客户端</p>
+    		<span class="s-arrow"></span>
+    	</div>
+    </a>
+    <a href="<?php echo $globalData['aUrl']['sFDCalcURL']; ?>" class="side-cal" target="_blank">
+    	<div class="sub-fixed sider-tips">
+    		<p class="s-txt">要贷款买房？赶紧算算吧！</p>
+			<span class="s-arrow"></span>
+    	</div>
+    </a>
+    <a href="javascript://" class="side-tel">
+    	<div class="sub-fixed sider-tips">
+    		<p class="s-tel">客服：<em>400-868-1111</em><?=isset($serviceHotLine) ? '&nbsp;转&nbsp;<em>'.$serviceHotLine.'</em>' : ''?></p>
+    		<p class="s-stime">(服务时间 9:00 —— 21:00)</p>
+    		<span class="s-arrow"></span>
+    	</div>
+    </a>
+    <a class="as-edit" target="_blank" href="<?php echo $globalData['aUrl']['sSurveyURL']; ?>"></a>
+    <a class="back-top j_back-top hide" href="javascript:void(0)"></a>
+</div>

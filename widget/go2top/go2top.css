@@ -1,0 +1,129 @@
+
+/**
+* 好房app 右侧固定二维码 和 回到顶端 css
+* author： huangjia
+* Date： 20140813
+*/
+
+/* 回到顶部 和 下载app  */
+#J_backTop{
+    position: fixed;
+    right: -35px;
+    bottom: 40px;
+    width: 120px;
+    height: 288px;
+    z-index: 100;
+}
+
+/*********************** xf3.0 *******************************/
+.hf-fixed-sider a .sub-fixed {
+	display: none;
+}
+.hf-fixed-sider a:hover .sub-fixed {
+	display: block;
+}
+.sub-fixed {
+	display: none;
+	position: absolute;
+	right:70px;
+	background: #fff;
+	padding:15px;
+	border:1px solid #e1e1e1;
+	text-align: center;
+	color:#666;
+}
+.sub-fixed .s-arrow {
+	display: block;
+	position: absolute;
+	right:-10px;
+	top:50%;
+	width:10px;
+	height:15px;
+	background: url("./images/hf-goto-top.png") no-repeat 0 -285px;
+}
+.sider-tips {
+	width:200px;
+	font-size: 14px;
+}
+.sider-tips em {
+	font-size:16px;
+	font-weight: bold;
+	color:#ff731f;
+}
+/* 回顶部 */
+.back-top{
+    display: block;
+  	background: url("./images/hf-goto-top.png") no-repeat;
+    width: 60px;
+    height: 36px;
+    background-position: 0 -239px;
+    margin-top: 5px;
+}
+.back-top:hover{
+    background-position: -60px -239px;
+}
+/* 二维码 */
+.small-rcode,.side-cal,.as-edit ,.side-tel{
+	border:1px solid #e1e1e1;
+	border-bottom: none;
+    display: block;
+    background:#fff url("./images/hf-goto-top.png") no-repeat;
+    width: 58px;
+    height: 58px;
+    background-position: 0px 2px;
+    position: relative;
+}
+.small-rcode:hover{
+    background-position: -62px 2px;
+}
+
+.small-rcode .s-arrow {
+	top:20px;
+}
+
+.side-cal {
+	background-position: 0 -59px;
+}
+.side-cal:hover {
+	background-position: -62px -59px;
+}
+.side-cal .s-arrow {
+	top:20px;
+}
+.side-tel {
+	background-position: 0 -118px;
+}	
+.side-tel:hover {
+	background-position: -62px -118px;
+}
+.side-tel .s-arrow {
+	top:20px;
+}
+.as-edit{
+	background-position: 0 -178px;
+}
+.as-edit:hover{
+   background-position: -62px -178px;
+}
+
+.sider-ewm {
+	background: #fff;
+	border:1px solid #e1e1e1;
+	padding:23px;
+	padding-top: 155px;
+	padding-bottom: 15px;
+	position: absolute;
+	z-index: 11;
+	display: none;
+	background:#fff url('./images/ewm.png') no-repeat 23px 23px;
+	width:120px;
+}
+.sider-ewm p {
+	color: #ff731f;
+	margin-top: 0px;
+	text-align: center;
+}
+
+.hide{
+	display: none;
+}
