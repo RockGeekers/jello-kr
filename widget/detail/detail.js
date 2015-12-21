@@ -44,18 +44,21 @@ var app = module.exports = function(opt){
 				$('.reply_message').show();
 			});
 			$('#J_userInfo .ladda-button').click(function(){
-				_this.postComment(opt.postUrl ,{
-					author_id : loginInfo.JSESSIONID,
-					to_author : $('#post').attr('data-author'),
-					content : $('#post').val()
-				},function(data){
-					if(data.code == 0){
-						$('#post').val('');
-						$('.J_delAuthor').click();
-						var result = Template.parse(_this.commentTemplate,{data:data});
-						$('#J_comments').prepend(result);
-					}
-				})
+				var content = $('#post').val();
+				if(content){
+					_this.postComment(opt.postUrl ,{
+						author_id : loginInfo.JSESSIONID,
+						to_author : $('#post').attr('data-author'),
+						content : content
+					},function(data){
+						if(data.code == 0){
+							$('#post').val('');
+							$('.J_delAuthor').click();
+							var result = Template.parse(_this.commentTemplate,{data:data});
+							$('#J_comments').prepend(result);
+						}
+					});
+				}
 			});
 			$('.J_delAuthor').click(function(){
 				$('.J_toAuthor').text('');
