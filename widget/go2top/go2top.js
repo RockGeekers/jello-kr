@@ -1,4 +1,3 @@
-/* build Date:2014-08-21 12:14:39 PM author:huangjia */
 var $ = require('common:jquery');
 
 ! function(a, b, c) {

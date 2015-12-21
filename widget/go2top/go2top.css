@@ -1,11 +1,3 @@
-
-/**
-* 好房app 右侧固定二维码 和 回到顶端 css
-* author： huangjia
-* Date： 20140813
-*/
-
-/* 回到顶部 和 下载app  */
 #J_backTop{
     position: fixed;
     right: -35px;
@@ -15,7 +7,6 @@
     z-index: 100;
 }
 
-/*********************** xf3.0 *******************************/
 .hf-fixed-sider a .sub-fixed {
 	display: none;
 }
