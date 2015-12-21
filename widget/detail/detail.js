@@ -11,11 +11,11 @@ var app = module.exports = function(opt){
 				i = 0
 			var getlogin = setInterval(function(){
 				i++;
-				console.log(loginInfo)
 				if(loginInfo || i > 10){
 					clearInterval(getlogin);
 					if(loginInfo && loginInfo.isUserLogin){
-						$('#J_userInfo').show().find('.avatar').css('backgroundImage',loginInfo.image);
+						console.log(loginInfo);
+						$('#J_userInfo').show().find('.avatar').css('backgroundImage','url(' + loginInfo.image + ')');
 						$('#J_loginname').html(loginInfo.nickName);
 						$('.require-login').show();
 						$('.J_requirelogin').hide();
@@ -28,8 +28,7 @@ var app = module.exports = function(opt){
 					},'get',function(data){
 						if(data.code == 0){
 							if(data.data.length){
-								$('#commentTotalCount').html(data.data.length);
-								$('#commentFormCount').html(data.data.length);
+								$('#commentTotalCount,#commentFormCount').html(data.data.length);
 								var result = Template.parse(_this.commentTemplate,{data:data});
 								$('#J_comments').html(result);
 							}
@@ -39,13 +38,45 @@ var app = module.exports = function(opt){
 			},200);
 			
 			$('#J_comments').delegate('.pull-right','click',function(){
-
+				var dataAuthor = $(this).attr('data-author')
+				$('#post').attr('data-author',dataAuthor);
+				$('.J_toAuthor').text(dataAuthor);
+				$('.reply_message').show();
+			});
+			$('#J_userInfo .ladda-button').click(function(){
+				_this.postComment(opt.postUrl ,{
+					author_id : loginInfo.JSESSIONID,
+					to_author : $('#post').attr('data-author'),
+					content : $('#post').val()
+				},function(data){
+					if(data.code == 0){
+						$('#post').val('');
+						$('.J_delAuthor').click();
+						var result = Template.parse(_this.commentTemplate,{data:data});
+						$('#J_comments').prepend(result);
+					}
+				})
+			});
+			$('.J_delAuthor').click(function(){
+				$('.J_toAuthor').text('');
+				$('.reply_message').hide();
+				$('#post').attr('data-author','');
 			});
 		},
 		getList : function(url,opt,type,callback){
 			var _this = this;
 			$.ajax({
 			   	type: type,
+			   	url: url,
+			   	data: opt,
+			   	success: callback
+			}).complete(function(){
+				console.log('success');
+			});
+		},
+		postComment : function(url,opt,callback){
+			$.ajax({
+			   	type: 'post',
 			   	url: url,
 			   	data: opt,
 			   	success: callback
