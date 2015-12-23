@@ -654,9 +654,9 @@ article.single-post section.single-post-share ul.actions li a {
 }
 
 article.single-post section.single-post-share ul.actions li a i {
-    width: 28px;
-    height: 28px;
-    background: #7791b0;
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/comment.png') center center no-repeat;
     display: block;
     text-align: center;
     line-height: 28px;
@@ -686,14 +686,11 @@ article.single-post section.single-post-share ul.actions li a.icon-fly i:nth-of-
     transform: translate(-8px, -30px) scale(2) rotate(-45deg)
 }
 
-article.single-post section.single-post-share ul.actions li a:hover i {
-    background: #6378b0
-}
-
 article.single-post section.single-post-share ul.actions li a span {
     position: absolute;
     left: 100%;
     top: 50%;
+    top: 12% \9;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
@@ -714,6 +711,7 @@ article.single-post section.single-post-share ul.actions li a span:after {
     content: " ";
     width: 6px;
     height: 6px;
+    display: none \9;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -733,11 +731,6 @@ article.single-post section.single-post-share .single-post-share-list {
 }
 .bshare-more,.bshare-share-count{
     display: none !important;
-}
-@media (max-width: 800px) {
-    article.single-post section.single-post-share .single-post-share-list.hide-external {
-        width: auto
-    }
 }
 
 article.single-post section.single-post-tags .tag-tip {

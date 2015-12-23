@@ -717,6 +717,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     -webkit-transform: rotate(45deg) translate(0, 0);
     -ms-transform: rotate(45deg) translate(0, 0);
     transform: rotate(45deg) translate(0, 0);
+    transform: none \0;
 }
 
 .index-wrap .main-section .news-list .categories a.loading,
