@@ -12,12 +12,7 @@ var app = module.exports = function(opt){
 			var getlogin = setInterval(function(){
 				i++;
 				if(loginInfo || i > 100){
-					if (loginInfo) {
-						console.log(loginInfo.isUserLogin);
-					}
-					clearInterval(getlogin);
 					if(loginInfo && loginInfo.isUserLogin){
-						console.log(loginInfo);
 						$('#J_userInfo').show().find('.avatar').css('backgroundImage','url(' + loginInfo.image + ')');
 						$('#J_loginname').html(loginInfo.nickName);
 						$('.require-login').show();
@@ -37,6 +32,7 @@ var app = module.exports = function(opt){
 							}
 						}
 					});
+					clearInterval(getlogin);
 				}
 			},200);
 			
