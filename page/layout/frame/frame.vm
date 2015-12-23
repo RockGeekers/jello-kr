@@ -23,13 +23,16 @@
     window.onload = function(){
         loginInfo = window.frames['login'].document.body.innerHTML ;
         loginInfo = loginInfo && eval('(' + loginInfo + ')');
+        var unlogin = document.getElementById('J_unlogin'),
+            logined = document.getElementById('J_logined');
         if(loginInfo){
             if(loginInfo.isUserLogin){
-                $('.J_unlogin').hide();
-                $('.J_logined').children('.loginUser').html(loginInfo.nickName).end().show();
+                unlogin.style.display = 'none';
+                document.getElementById('loginUser').innerHTML = loginInfo.nickName
+                logined.style.display = 'inline';
             }else{
-                $('.J_logined').hide();
-                $('.J_unlogin').show();
+                unlogin.style.display = 'inline';
+                logined.style.display = 'none';
             }
         }
         window.loginInfo = loginInfo;
