@@ -683,6 +683,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     -webkit-transform: translate(0, -8px);
     -ms-transform: translate(0, -8px);
     transform: translate(0, -8px);
+    transform: none \0;
     opacity: 0;
     position: absolute;
     top: 100%;
@@ -694,13 +695,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
     display: block;
     margin-top: -7px;
     margin-left: -3px;
-    width:0px\9;
-    height: 0px\9; 
-    display: none\9;
-    margin-top: -1px\9;
-    margin-left: -5px\9;
-    border: 6px solid #e9eaec\9;
-    border-top-color:#3da9f7\9;
+    width:0px\0;
+    height: 0px\0; 
+    display: none\0;
+    margin-top: -1px\0;
+    margin-left: -5px\0;
+    border: 6px solid #e9eaec\0;
+    border-top-color:#3da9f7\0;
 }
 
 .index-wrap .main-section .news-list .categories a.active {
