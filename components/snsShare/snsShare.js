@@ -1,3 +1,4 @@
+var $ = require('jquery');
 (function(window,$){
 	var SnsShare = function(opt){
 		this.options = $.extend({
@@ -104,7 +105,7 @@
 	// 	// });
 	// };
 	module.exports = SnsShare;
-})(window,require('common/web:jquery'));
+})(window,$);
 // http://service.weibo.com/share/share.php?title=%E5%88%86%E4%BA%AB%E5%88%B0%E4%BA%BA%E4%BA%BA%E7%BD%91%E4%BB%A3%E7%A0%81+-+JiaThis%20%E5%85%B3%E4%BA%8E%E4%BA%BA%E4%BA%BA%E7%BD%91%EF%BC%9A%E4%BA%BA%E4%BA%BA%E7%BD%91%EF%BC%88http%3A%2F%2Fwww.renren.com%2F%EF%BC%89%E6%98%AF%E4%B8%AD%E5%9B%BD%E6%9C%80%E5%A4%A7%E7%9A%84%E5%AE%9E%E5%90%8D%E5%88%B6%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%AB%99%EF%BC%8C%E5%B8%AE%E5%8A%A9%E4%BD%A0%E4%B8%8E%E6%9C%8B%E5%8F%8B%E3%80%81%E5%90%8C%E5%AD%A6%E3%80%81%E5%90%8C%E4%BA%8B%E3%80%81%E5%AE%B6%E4%BA%BA%E4%BF%9D%E6%8C%81%E6%9B%B4%E7%B4%A7%E5%AF%86%E7%9A%84%E8%81%94%E7%B3%BB%E3%80%82%E5%9C%A8%E8%BF%99%E9%87%8C%EF%BC%8C%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%86%99%E6%97%A5%E5%BF%97%E3%80%81%E4%BC%A0%E7%85%A7%E7%89%87%E3%80%81%E7%8E%A9%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%B8%8E%E5%A5%BD%E5%8F%8B%E5%88%86%E4%BA%AB%E7%94%9F%E6%B4%BB%E7%82%B9%E6%BB%B4%E3%80%82%E5%BF%AB%E5%92%8C%E5%A5%BD%E5%8F%8B%E4%B8%80%E8%B5%B7%E4%B8%8A%E4%BA%BA%E4%BA%BA%E7%BD%91%EF%BC%8C%E7%8E%A9%E5%9C%A8%E4%B8%80%E8%B5%B7%EF%BC%8C%E5%BF%83%E5%9C%A8%E4%B8%80%E8%B5%B7%EF%BC%81%E2%80%BB%E5%A6%82%E4%BD%95%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%AB%99%E6%B7%BB%E4%B8%8A%5C%EF%BC%82%E5%88%86%E4%BA%AB%E5%88%B0%E4%BA%BA%E4%BA%BA%E7%BD%91%5C%EF%BC%82%E7%9A%84%E5%8A%9F%E8%83%BD%EF%BC%9F&url=http%3A%2F%2Ft.jiathis.com%2FzV1k&source=bookmark&appkey=2992571369&pic=&ralateUid=1647863564
 // 'http://service.weibo.com/share/share.php?appkey={appid}&url={url}&pic={picurl}&searchPic=true&style=simple' //新浪微博
 // 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={url}&title={title}&pics=&summary=&desc=' //qq空间
