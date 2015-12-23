@@ -11,7 +11,7 @@ var app = module.exports = function(opt){
 				i = 0
 			var getlogin = setInterval(function(){
 				i++;
-				if(loginInfo || i > 10){
+				if(loginInfo || i > 20){
 					clearInterval(getlogin);
 					if(loginInfo && loginInfo.isUserLogin){
 						console.log(loginInfo);
