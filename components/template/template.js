@@ -23,7 +23,6 @@ return {
 			var tmp = this.parseSyntax(content);
 			return (new Function('d', 'r', tmp))(data, []);
 		}catch(e){
-			console && console.log(content, tmp);
 			throw new Error(e.message);
 		}
 	},

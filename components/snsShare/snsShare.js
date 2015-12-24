@@ -76,13 +76,11 @@ var $ = require('jquery');
 				else if(val && part.indexOf(idx) < 0){
 					
 					key = (idx == 'content' ? defaults.CONTENT[sns] : (idx == 'pic' ? defaults.PIC[sns] : idx));
-					console.log(sns,idx,key);
 					args.push(key + '=' + encodeURIComponent(val || ''));
 				}
 			});
 
 			self.urls[sns] = defaults.PREFIX[sns]+args.join('&');
-			console.log(args);
 			if(depends){
 				$(self.children).filter('[sns-data="'+ sns +'"]').attr('href',self.urls[sns]);
 			}else{

@@ -56,7 +56,6 @@ var app = module.exports = function(opt) {
 			   	data: opt,
 			   	success: callback
 			}).complete(function(){
-				console.log('success');
 			});
 		} 
 	};

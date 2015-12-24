@@ -73,7 +73,6 @@ var app = module.exports = function(opt){
 			   	data: opt,
 			   	success: callback
 			}).complete(function(){
-				console.log('success');
 			});
 		},
 		postComment : function(url,opt,callback){
@@ -83,7 +82,6 @@ var app = module.exports = function(opt){
 			   	data: opt,
 			   	success: callback
 			}).complete(function(){
-				console.log('success');
 			});
 		} 
 	};
