@@ -101,13 +101,6 @@ a:hover {
     z-index: 50
 }
 
-@media (max-width: 800px) {
-    .pic .mask-tags {
-        padding: 0px 6px;
-        font-size: 10px;
-        line-height: 1.6
-    }
-}
 
 .badge-tv {
     position: relative;
@@ -129,13 +122,6 @@ a:hover {
     z-index: 10;
     opacity: 0.8
 }
-
-@media (max-width: 800px) {
-    .badge-tv:before {
-        background-size: 28px
-    }
-}
-
 .badge-tv:hover:before {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.3)
@@ -205,41 +191,19 @@ a:hover {
     padding: 0px 10px
 }
 
-@media (max-width: 800px) {
-    .ad-wrapper:before {
-        padding: 0px 6px;
-        font-size: 10px;
-        line-height: 1.6
-    }
-}
-
 .radius-box {
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
 }
 
-@media (max-width: 800px) {
-    .mobile-hide {
-        display: none !important
-    }
-}
 
 .mobile-show {
     display: none
 }
 
-@media (max-width: 800px) {
-    .mobile-show {
-        display: block
-    }
-}
+
 .index-wrap{
     padding-bottom: 20px;
-}
-@media (max-width: 800px) {
-    .index-wrap {
-        padding: 10px
-    }
 }
 
 .index-wrap .head-images {
@@ -369,20 +333,6 @@ a:hover {
     z-index: 50
 }
 
-@media (max-width: 800px) {
-    .index-wrap .head-images .scrollers .mask-tags {
-        padding: 0px 6px;
-        font-size: 10px;
-        line-height: 1.6
-    }
-}
-
-@media (max-width: 800px) {
-    .index-wrap .head-images .smaller-images {
-        display: none !important
-    }
-}
-
 .index-wrap .head-images .smaller-images .block {
     float: left;
     margin-left: 10px;
@@ -457,14 +407,6 @@ a:hover {
     bottom: auto;
     display: block;
     z-index: 50
-}
-
-@media (max-width: 800px) {
-    .index-wrap .head-images .smaller-images .block.article a .mask-tags {
-        padding: 0px 6px;
-        font-size: 10px;
-        line-height: 1.6
-    }
 }
 
 .index-wrap .head-images .smaller-images .block.ad a {

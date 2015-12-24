@@ -9,19 +9,11 @@
     margin-bottom: 20px
 }
 
-@media (max-width: 800px) {
-    .articleInsideLink,
-    .latest-articles,
-    .top-articles {
-        display: none !important
-    }
-}
-
 @media (min-width: 800px) and (max-width: 1200px) {
     .articleInsideLink,
     .latest-articles,
     .top-articles {
-        padding: 15px
+        padding: 15px;
     }
 }
 

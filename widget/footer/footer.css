@@ -6,7 +6,6 @@
 
 .bottomCon table {
 	border-collapse: collapse;
-	width: 960px;
 	margin: auto;
 }
 
@@ -49,7 +48,6 @@
 }
 
 .bottom .bottomBox {
-	width: 960px;
 	margin: auto;
 	position: relative;
 	z-index: 100;

@@ -68,12 +68,6 @@ a:hover {
     }
 }
 
-@media (max-width: 800px) {
-    .container {
-        width: auto
-    }
-}
-
 .clearfix {
     *zoom: 1
 }
@@ -126,11 +120,6 @@ a:hover {
     }
 }
 
-@media (max-width: 800px) {
-    .col-sub {
-        float: none
-    }
-}
 
 .col-main {
     float: right
@@ -145,12 +134,6 @@ a:hover {
 @media (min-width: 800px) and (max-width: 1200px) {
     .col-main {
         width: 700px
-    }
-}
-
-@media (max-width: 800px) {
-    .col-main {
-        float: none
     }
 }
 
@@ -182,14 +165,6 @@ a:hover {
     z-index: 50
 }
 
-@media (max-width: 800px) {
-    .pic .mask-tags {
-        padding: 0px 6px;
-        font-size: 10px;
-        line-height: 1.6
-    }
-}
-
 .badge-tv {
     position: relative;
     overflow: hidden
@@ -209,12 +184,6 @@ a:hover {
     background-size: 40px;
     z-index: 10;
     opacity: 0.8
-}
-
-@media (max-width: 800px) {
-    .badge-tv:before {
-        background-size: 28px
-    }
 }
 
 .badge-tv:hover:before {
@@ -286,43 +255,19 @@ a:hover {
     padding: 0px 10px
 }
 
-@media (max-width: 800px) {
-    .ad-wrapper:before {
-        padding: 0px 6px;
-        font-size: 10px;
-        line-height: 1.6
-    }
-}
 
 .radius-box {
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
 }
 
-@media (max-width: 800px) {
-    .mobile-hide {
-        display: none !important
-    }
-}
 
 .mobile-show {
     display: none
 }
 
-@media (max-width: 800px) {
-    .mobile-show {
-        display: block
-    }
-}
-
 {
     margin: 0 auto
-}
-
-@media (max-width: 800px) {
-    {
-        padding: 10px
-    }
 }
 
 .article-detail-wrap.reading-off {
@@ -345,13 +290,6 @@ a:hover {
         width: 1000px
     }
 }
-
-@media (max-width: 800px) {
-    {
-        width: auto
-    }
-}
-
 .article-section:not(:first-child) {
     margin: 50px 0
 }
@@ -403,12 +341,6 @@ a:hover {
     }
 }
 
-@media (max-width: 800px) {
-    {
-        float: none
-    }
-}
-
 .main-section .content-wrapper.focus-edition {
     float: none;
     margin: 0 auto
@@ -427,11 +359,6 @@ article.single-post {
     }
 }
 
-@media (max-width: 800px) {
-    article.single-post {
-        padding: 20px 15px
-    }
-}
 
 article.single-post header h1 {
     font-size: 24px;
@@ -443,12 +370,6 @@ article.single-post header h1 {
 @media (min-width: 800px) and (max-width: 1200px) {
     article.single-post header h1 {
         margin-bottom: 15px
-    }
-}
-
-@media (max-width: 800px) {
-    article.single-post header h1 {
-        font-size: 17px
     }
 }
 
@@ -475,17 +396,6 @@ article.single-post .author .avatar {
     margin-right: 6px;
     border-radius: 50%
 }
-
-@media (max-width: 800px) {
-    article.single-post .author .avatar {
-        width: 20px;
-        height: 20px;
-        position: relative;
-        top: -2px;
-        margin-right: 3px
-    }
-}
-
 article.single-post .single-post-header__headline {
     text-align: center;
     margin: 20px 0;
@@ -517,21 +427,11 @@ article.single-post section.ad {
     color: #666666
 }
 
-@media (max-width: 800px) {
-    article.single-post section.ad {
-        font-size: 13px
-    }
-}
 
 article.single-post section.to-tip {
     text-align: center
 }
 
-@media (max-width: 800px) {
-    article.single-post section.to-tip {
-        display: none !important
-    }
-}
 
 article.single-post section.to-tip .inner {
     display: inline-block;
@@ -736,11 +636,6 @@ article.single-post section.single-post-share .single-post-share-list.hide-exter
     width: 184px
 }
 
-@media (max-width: 800px) {
-    article.single-post section.single-post-share .single-post-share-list.hide-external {
-        width: auto
-    }
-}
 
 article.single-post section.single-post-tags .tag-tip {
     color: #666
@@ -792,11 +687,6 @@ section.single-post-comment {
     }
 }
 
-@media (max-width: 800px) {
-    section.single-post-comment {
-        padding: 20px
-    }
-}
 
 section.single-post-comment h2 {
     margin-bottom: 15px;
