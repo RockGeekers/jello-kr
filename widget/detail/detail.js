@@ -11,10 +11,8 @@ var app = module.exports = function(opt){
 				i = 0
 			var getlogin = setInterval(function(){
 				i++;
-				if(loginInfo || i > 20){
-					clearInterval(getlogin);
+				if(loginInfo || i > 100){
 					if(loginInfo && loginInfo.isUserLogin){
-						console.log(loginInfo);
 						$('#J_userInfo').show().find('.avatar').css('backgroundImage','url(' + loginInfo.image + ')');
 						$('#J_loginname').html(loginInfo.nickName);
 						$('.require-login').show();
@@ -34,6 +32,7 @@ var app = module.exports = function(opt){
 							}
 						}
 					});
+					clearInterval(getlogin);
 				}
 			},200);
 			
