@@ -628,11 +628,6 @@ article.single-post section.single-post-share .single-post-share-list {
     white-space: nowrap;
     text-align: right
 }
-
-article.single-post section.single-post-share .single-post-share-list.hide-external {
-    width: 184px
-}
-
 .bshare-more,.bshare-share-count{
     display: none !important;
 }
