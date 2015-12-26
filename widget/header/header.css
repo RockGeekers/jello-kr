@@ -1,5 +1,8 @@
 /* 寮�椤甸潰鏍峰紡 */
-
+#wrapper{
+    min-width: 1170px;
+    margin:0 auto;
+}
 .top {
     height: 50px;
     background: url('./images/bg.jpg') center center no-repeat;
@@ -19,8 +22,8 @@
 }
 .topBox {
     width: 1170px;
-    margin: auto;
     height: 60px;
+    margin:0 auto;
 }
 .logo img{
 	width: 130px;
