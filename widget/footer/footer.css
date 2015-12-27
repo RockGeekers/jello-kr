@@ -7,7 +7,7 @@
 .bottomCon table {
 	border-collapse: collapse;
 	margin: auto;
-	width: 100%;
+	width: 1170px;
 }
 
 .bottomCon td {
@@ -49,6 +49,7 @@
 }
 
 .bottom .bottomBox {
+	width: 1170px;
 	margin: auto;
 	position: relative;
 	z-index: 100;

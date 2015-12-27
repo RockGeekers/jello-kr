@@ -140,7 +140,10 @@ a:hover {
 .brand-link {
     color: #3da9f7
 }
-
+.main-section{
+    width: 1170px;
+    margin: 0 auto;
+}
 .brand-link:hover {
     color: #2c79b0
 }
