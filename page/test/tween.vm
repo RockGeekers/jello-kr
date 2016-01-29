@@ -1,0 +1,14 @@
+#html()
+	#head()
+	#end
+	
+	#body()
+		<div class="circle"></div>
+	#end
+
+	#script()
+		require(['./test']);
+	#end
+	#require("./tween.vm")
+
+#end
